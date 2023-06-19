@@ -1,0 +1,10 @@
+.story-display {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+.story-display p{
+    color : #000;
+}
+  

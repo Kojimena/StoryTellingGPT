@@ -1,0 +1,12 @@
+.story-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  
+  .story-form input,
+  .story-form select,
+  .story-form button {
+    margin: 5px;
+  }
+  
