@@ -23,6 +23,7 @@
   font-size: 14px;
   line-height: 2;
   color : #fff;
+  padding: 0;
 }
 
 .story-form input:focus,
@@ -71,11 +72,5 @@
 
   .story-form .story-form-title{
     font-size: 1.60rem;
-  }
-
-  .story-form input,
-  .story-form select,
-  .story-form button {
-    padding: 8px;
   }
 }
