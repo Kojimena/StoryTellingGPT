@@ -57,6 +57,12 @@
   .story-form .story-form-title{
     font-size: 1.5rem;
   }
+
+  .story-form input,
+  .story-form select,
+  .story-form button {
+    padding: 8px;
+  }
 }
 
 @media (max-width: 480px) {
