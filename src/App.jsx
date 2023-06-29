@@ -11,7 +11,6 @@ function App() {
   const [loading, setLoading] = useState(false) 
 
   const API_KEY = import.meta.env.VITE_API_KEY
-  console.log(API_KEY)
 
   const generateStory = async (inputs) => {
     setLoading(true) 
