@@ -2,15 +2,16 @@ import React, { useState } from "react"
 import axios from "axios"
 import StoryForm from "./components/StoryForm/StoryForm"
 import StoryDisplay from "./components/StoryDisplay/StoryDisplay"
+import "./assets/fonts/fonts.css"
 import "./App.css"
 
 function App() {
   const [storyInputs, setStoryInputs] = useState(null)
   const [story, setStory] = useState("")
-  const [loading, setLoading] = useState(false) // <-- Nueva variable de estado
+  const [loading, setLoading] = useState(false) 
 
 
-  const API_KEY = "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" // reemplaza esto con tu clave API real
+  const API_KEY = import.meta.env.VITE_API_KEY
 
   const generateStory = async (inputs) => {
     setLoading(true) 
