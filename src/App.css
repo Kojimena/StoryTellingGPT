@@ -80,11 +80,10 @@
 
 @media (max-width: 768px) {
   .books-container{
-    height: 100px;
+    height: 160px;
     display: block;
     padding-top: 20px;
     position: relative;
-    top: 15px;
   }
 }
 
