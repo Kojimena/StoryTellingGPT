@@ -19,7 +19,7 @@
 .story-form button {
   margin: 5px;
   border-radius: 100px;
-  padding: 10px;
+  height: 40px;
   font-size: 14px;
   line-height: 2;
   color : #fff;
@@ -56,12 +56,6 @@
 @media (max-width: 768px) {
   .story-form .story-form-title{
     font-size: 1.5rem;
-  }
-
-  .story-form input,
-  .story-form select,
-  .story-form button {
-    padding: 8px;
   }
 }
 
