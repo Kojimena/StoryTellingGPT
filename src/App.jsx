@@ -24,7 +24,7 @@ function App() {
           messages: [
             {
               role: "system",
-              content: `Escribe una historia que empiece con la palabra Érase una vez de ${inputs.storyLength} palabras sobre los siguientes personajes: ${inputs.characterNames.join(", ")}. El tipo de historia es ${inputs.storyType}.`
+              content: `Escribe una historia que empiece con la palabra Érase una vez de ${inputs.storyLength} palabras sobre los siguientes personajes: ${inputs.characterNames.join(", ")}. El tipo de historia es ${inputs.storyType}. Usa este formato: Título:Pon un título a la historia y luego escribe la historia .`
             }
           ]
         },
