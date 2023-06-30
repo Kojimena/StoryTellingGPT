@@ -70,6 +70,31 @@
   justify-content: flex-start;
 }
 
+.btnlanguage{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  display: flex;
+  gap : 2px;
+}
+
+.btnlanguage button{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btnlanguage button:hover{
+  filter: drop-shadow(0 0 2em #fee60ee8);
+}
+
+.btnlanguage img {
+  width: 40px;
+  height: 40px;
+}
+
 @media (max-width: 920px) and (min-width: 768px) {
   .books-container{
     top: 100px;
@@ -84,6 +109,10 @@
     display: block;
     padding-top: 20px;
     position: relative;
+  }
+  .btnlanguage img {
+    width: 30px;
+    height: 30px;
   }
 }
 

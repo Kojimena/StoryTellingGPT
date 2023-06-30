@@ -1,0 +1,25 @@
+{
+    "storyAI": "STORY AI",
+    "numCharacters": "Número de personajes",
+    "numCharactersPlaceholder": "Número de personajes",
+    "charNames": "Nombres de los personajes",
+    "charName": "Nombre del personaje",
+    "storyType": "Tipo de cuento",
+    "storyTypePlaceholder": "Tipo de cuento",
+    "adventure": "Aventura",
+    "fantasy": "Fantasía",
+    "horror": "Terror",
+    "scifi": "Ciencia Ficción",
+    "romance": "Romance",
+    "storyLength": "Longitud de la historia",
+    "storyLengthPlaceholder": "Longitud de la historia (en palabras)",
+    "generateStory": "Generar Cuento",
+    "completeFields": "Por favor, completa todos los campos.",
+    "writeStory": "Escribe una historia que empiece con la palabra Érase una vez de",
+  "wordsAboutCharacters": "palabras sobre los siguientes personajes:",
+  "storyTypeIs": "El tipo de historia es",
+  "useFormat": "Usa este formato: Título:Pon un título a la historia y luego escribe la historia.",
+  "storyGenerationError": "Hubo un error al generar la historia"
+  }
+  
+  

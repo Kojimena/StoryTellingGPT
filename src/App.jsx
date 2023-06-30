@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import axios from "axios"
 import StoryForm from "./components/StoryForm/StoryForm"
 import StoryDisplay from "./components/StoryDisplay/StoryDisplay"
+import "/i18n"
+import { useTranslation } from "react-i18next"
 import "./assets/fonts/fonts.css"
 import "./App.css"
 
@@ -9,6 +11,8 @@ function App() {
   const [storyInputs, setStoryInputs] = useState(null)
   const [story, setStory] = useState("")
   const [loading, setLoading] = useState(false) 
+  const { t, i18n } = useTranslation()  
+
 
   const API_KEY = import.meta.env.VITE_API_KEY
 
@@ -24,7 +28,7 @@ function App() {
           messages: [
             {
               role: "system",
-              content: `Escribe una historia que empiece con la palabra Érase una vez de ${inputs.storyLength} palabras sobre los siguientes personajes: ${inputs.characterNames.join(", ")}. El tipo de historia es ${inputs.storyType}. Usa este formato: Título:Pon un título a la historia y luego escribe la historia .`
+              content:`${t("writeStory")} ${inputs.storyLength} ${t("wordsAboutCharacters")} ${inputs.characterNames.join(", ")}. ${t("storyTypeIs")} ${inputs.storyType}. ${t("useFormat")}`
             }
           ]
         },
@@ -51,6 +55,10 @@ function App() {
 
   return (
     <div className="App">
+      <div className="btnlanguage">
+        <button className="btnen" onClick={() => i18n.changeLanguage("en")}><img src="/images/en.svg" alt="English" className="en" /></button>
+        <button className="btnes" onClick={() => i18n.changeLanguage("es")}> <img src="/images/es.svg" alt="Spanish" className="es" /></button>
+      </div>
       <div className="books-container">
         <img src="/images/books.svg" alt="Story AI" className="books" />
       </div>

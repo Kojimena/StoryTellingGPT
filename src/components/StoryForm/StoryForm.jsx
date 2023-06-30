@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 import PropTypes from "prop-types"
 import "./StoryForm.css"
 
@@ -7,6 +8,7 @@ const StoryForm = ({ setStoryInputs }) => {
   const [numCharacters, setNumCharacters] = useState("1")
   const [storyLength, setStoryLength] = useState("")
   const [characterNames, setCharacterNames] = useState([""]) // Almacenar los nombres de los personajes en un array
+  const { t } = useTranslation()
 
   const handleCharacterNameChange = (index, event) => {
     const newCharacterNames = [...characterNames]
@@ -29,7 +31,7 @@ const StoryForm = ({ setStoryInputs }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (storyType === "" || numCharacters === "" || storyLength === "" || characterNames.includes("")) {
-      alert("Por favor, completa todos los campos.")
+      alert(t("completeFields"))
       return
     }
     setStoryInputs({ characterNames, storyType, numCharacters, storyLength })
@@ -37,41 +39,41 @@ const StoryForm = ({ setStoryInputs }) => {
 
   return (
     <form className="story-form" onSubmit={handleSubmit}>
-      <h2 className="story-form-title">STORY AI</h2>
-      <h4>Número de personajes</h4>
+      <h2 className="story-form-title">{t("storyAI")}</h2>
+      <h4>{t("numCharacters")}</h4>
       <input
         type="number"
-        placeholder="Número de personajes"
+        placeholder={t("numCharactersPlaceholder")}
         value={numCharacters}
         onChange={(e) => setNumCharacters(e.target.value)}
       />
-      <h4>Nombres de los personajes</h4>
+      <h4>{t("charNames")}</h4>
       {characterNames.map((name, index) => (
         <input
           key={index}
           type="text"
-          placeholder={`Nombre del personaje ${index + 1}`}
+          placeholder={`${t("charName")} ${index + 1}`}
           value={name}
           onChange={(e) => handleCharacterNameChange(index, e)}
         />
       ))}
-      <h4>Tipo de cuento</h4>
+      <h4>{t("storyType")}</h4>
       <select value={storyType} onChange={(e) => setStoryType(e.target.value)}>
-        <option value="">Tipo de cuento</option>
-        <option value="aventura">Aventura</option>
-        <option value="fantasia">Fantasía</option>
-        <option value="terror">Terror</option>
-        <option value="ciencia ficcion">Ciencia Ficción</option>
-        <option value="romance">Romance</option>
+        <option value="">{t("storyTypePlaceholder")}</option>
+        <option value="aventura">{t("adventure")}</option>
+        <option value="fantasia">{t("fantasy")}</option>
+        <option value="terror">{t("horror")}</option>
+        <option value="ciencia ficcion">{t("scifi")}</option>
+        <option value="romance">{t("romance")}</option>
       </select>
-      <h4>Longitud de la historia</h4>
+      <h4>{t("storyLength")}</h4>
       <input
         type="number"
-        placeholder="Longitud de la historia (en palabras)"
+        placeholder={t("storyLengthPlaceholder")}
         value={storyLength}
         onChange={(e) => setStoryLength(e.target.value)}
       />
-      <button type="submit">Generar Cuento</button>
+      <button type="submit">{t("generateStory")}</button>
     </form>
   )
 }

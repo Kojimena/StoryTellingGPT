@@ -1,0 +1,26 @@
+{
+    "storyAI": "STORY AI",
+    "numCharacters": "Number of characters",
+    "numCharactersPlaceholder": "Number of characters",
+    "charNames": "Character names",
+    "charName": "Character name",
+    "storyType": "Type of story",
+    "storyTypePlaceholder": "Type of story",
+    "adventure": "Adventure",
+    "fantasy": "Fantasy",
+    "horror": "Horror",
+    "scifi": "Science Fiction",
+    "romance": "Romance",
+    "storyLength": "Story length",
+    "storyLengthPlaceholder": "Story length (in words)",
+    "generateStory": "Generate Story",
+    "completeFields": "Please, complete all the fields.",
+    "writeStory": "Write a story that begins with the word Once upon a time of",
+    "wordsAboutCharacters": "words about the following characters:",
+    "storyTypeIs": "The type of story is",
+    "useFormat": "Use this format: Title:Put a title to the story and then write the story.",
+    "storyGenerationError": "There was an error generating the story"
+  }
+  
+
+  
