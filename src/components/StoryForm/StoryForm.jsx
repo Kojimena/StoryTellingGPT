@@ -55,6 +55,7 @@ const StoryForm = ({ setStoryInputs }) => {
           onChange={(e) => handleCharacterNameChange(index, e)}
         />
       ))}
+      <h4>Tipo de cuento</h4>
       <select value={storyType} onChange={(e) => setStoryType(e.target.value)}>
         <option value="">Tipo de cuento</option>
         <option value="aventura">Aventura</option>
